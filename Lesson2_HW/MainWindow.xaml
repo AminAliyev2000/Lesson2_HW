@@ -1,0 +1,109 @@
+﻿<Window x:Class="Lesson2_HW.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Lesson2_HW"
+        mc:Ignorable="d"
+        Title="Calculator" 
+        Height="540" Width="340">
+    <Border
+            Background="#ebebeb" CornerRadius="10">
+     <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="2*"></RowDefinition>
+                <RowDefinition Height="3*"  MinHeight="50" ></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="12*"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Image Source="up.png"></Image>
+            <TextBox Name="txtbox"
+                     Grid.Row="1"
+                     Background="#ebebeb"
+                     FontSize="56"
+                     Padding="4"
+                     Text="0"
+                     TextWrapping="Wrap"
+                     TextAlignment="Justify"
+                     HorizontalAlignment="Right"
+                     VerticalAlignment="Center"
+                     BorderThickness="0"
+                     IsEnabled="False"
+                     TextChanged="txtbox_textchanged"
+                     >
+                
+            </TextBox>
+            <Image Grid.Row="2" Source="down.png"></Image>
+            <UniformGrid
+                Name="Buttongrid"
+                Grid.Row="3"
+                Columns="4"
+                Rows="6"
+                         
+             >
+                <Button Name="procentbutton"
+                     Click="OperatorChooseButton_Click"   Content="%" FontSize="20" FontWeight="SemiBold" Background="#f2f2f2" BorderThickness="0.6"></Button>
+                <Button Name="CEbutton"
+                        Content="CE" FontSize="20" FontWeight="SemiBold" Background="#f2f2f2" BorderThickness="0.6" Click="CEbutton_Click"></Button>
+                <Button Name="Cbutton"
+                        Content="C" FontSize="20" FontWeight="SemiBold" Background="#f2f2f2" BorderThickness="0.6" Click="Cbutton_Click"></Button>
+                <Button Name="DelButton"
+                         BorderThickness="0.6" Click="DelButton_Click">
+                    <Image  
+                           Source="del.png">
+                    </Image>
+                    
+                </Button>
+                <Button Name="transponirebutton"
+                    Click="OperatorChooseButton_Click"    Content="1/x" FontStyle="Oblique" FontWeight="SemiBold" FontSize="20" Background="#f2f2f2" BorderThickness="0.6"></Button>
+                <Button Name="pow2button"
+                   Click="OperatorChooseButton_Click"     Content="x^2" FontSize="20" FontWeight="SemiBold" Background="#f2f2f2" BorderThickness="0.6"></Button>
+                <Button Name="SquareRootButton"
+                       
+                        BorderThickness="0.6" Click="SquareRootButton_Click">
+                    <Image Source="sqrt.png"></Image>
+                </Button>
+                <Button Name="divbutton"
+                      Click="OperatorChooseButton_Click"  Content="/" FontSize="20" FontWeight="SemiBold" Background="#f2f2f2" BorderThickness="0.6"></Button>
+                <Button Name="button7"
+                      Click="NumreicButtons_Click"  Content="7" FontSize="18" FontWeight="Bold" Background="#efefef"   BorderThickness="0.6"></Button>
+                <Button Name="button8"
+                      Click="NumreicButtons_Click" Content="8" FontSize="18" FontWeight="Bold" Background="#efefef"   BorderThickness="0.6"></Button>
+                <Button Name="button9" 
+                      Click="NumreicButtons_Click"  Content="9" FontSize="18" FontWeight="Bold" Background="#efefef"   BorderThickness="0.6"></Button>
+                <Button Name="multbutton"
+                    Click="OperatorChooseButton_Click"    Content="x" FontSize="20" FontWeight="SemiBold" Background="#f2f2f2" BorderThickness="0.6"></Button>
+                <Button Name="button4"
+                      Click="NumreicButtons_Click"   Content="4" FontSize="18" FontWeight="Bold" Background="#efefef"   BorderThickness="0.6"></Button>
+                <Button Name="button5"
+                     Click="NumreicButtons_Click"    Content="5" FontSize="18" FontWeight="Bold" Background="#efefef"   BorderThickness="0.6"></Button>
+                <Button Name="button6"
+                      Click="NumreicButtons_Click"   Content="6" FontSize="18" FontWeight="Bold" Background="#efefef"   BorderThickness="0.6"></Button>
+                <Button Name="subtbutton"
+                    Click="OperatorChooseButton_Click"    Content="-" FontSize="20" FontWeight="SemiBold" Background="#f2f2f2" BorderThickness="0.6"></Button>
+                <Button Name="button1"
+                        Click="NumreicButtons_Click" Content="1" FontSize="18" FontWeight="Bold" Background="#efefef"   BorderThickness="0.6"></Button>
+                <Button Name="button2" 
+                       Click="NumreicButtons_Click"  Content="2" FontSize="18" FontWeight="Bold"  Background="#efefef"   BorderThickness="0.6"></Button>
+                <Button Name="button3" 
+                        Click="NumreicButtons_Click" Content="3" FontSize="18" FontWeight="Bold" Background="#efefef"   BorderThickness="0.6"></Button>
+                <Button Name="plusbutton" 
+                   Click="OperatorChooseButton_Click"     Content="+" FontSize="20" FontWeight="SemiBold" Background="#f2f2f2" BorderThickness="0.6"></Button>
+                <Button Name="plusminusbutton"
+                         BorderThickness="0.6" Click="plusminusbutton_Click">
+                    <Image Source="plusminus.png">
+                        
+                    </Image>
+                </Button>
+                <Button Name="button0" 
+                      Click="NumreicButtons_Click"   Content="0" FontSize="18" FontWeight="Bold" Background="#efefef"   BorderThickness="0.6"></Button>
+                <Button Name="dotbutton" 
+                        Content="." FontSize="20" FontWeight="SemiBold" Background="#f2f2f2" BorderThickness="0.6" Click="dotbutton_Click"></Button>
+                <Button Name="equalbutton" 
+                        Background="LightSkyBlue" BorderThickness="0.6" Content="=" FontSize="30" Click="equalbutton_Click"></Button>
+               
+            </UniformGrid>
+    </Grid>
+    </Border>
+ 
+</Window>
